@@ -27,13 +27,13 @@ export class AppService {
             // real API call
             const url = urls[index];
             return this.http.get(url).catch(err => {
-                // prevent stop interval, observable becomes completed
+                // prevent observable becomes completed (stop interval)
                 return Observable.empty();
             });
         })
         .catch (err => Observable.empty())
         .subscribe(data => {
-            // here will get only success result
+            // here will get only successfully result
             console.log(data);
         });
   }
