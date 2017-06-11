@@ -19,7 +19,7 @@ export class AppService {
             const index = Math.floor(Math.random() * 3);
             // mocked
             if (index > 1) {
-                return Observable.create( observer => {
+                return Observable.create(observer => {
                     observer.next(['mocked1', 'mocked2', 'mocked3']);
                     observer.complete();
                 });
